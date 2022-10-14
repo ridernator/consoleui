@@ -3,15 +3,16 @@
 
 class Window {
     public:
-        Window(const uint32_t x,
-               const uint32_t y,
-               const uint32_t width,
-               const uint32_t height,
-               const bool drawBorder = true);
+        Window(const bool drawBorder = true);
 
         ~Window();
 
         void repaint();
+
+        void setPosition(const uint32_t x,
+                         const uint32_t y,
+                         const uint32_t width,
+                         const uint32_t height);
 
         virtual void paint() = 0;
 
